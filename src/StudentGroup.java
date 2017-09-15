@@ -220,8 +220,8 @@ public class StudentGroup implements StudentArrayOperation {
 				newarr[j++]=students[i];
 			}
 		}
-		return newarr;
-		return null;*/
+		return newarr;*/
+		return null;
 	}
 
 	@Override
