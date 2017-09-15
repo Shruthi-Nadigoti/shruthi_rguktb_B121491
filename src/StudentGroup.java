@@ -132,7 +132,7 @@ public class StudentGroup implements StudentArrayOperation {
 	}
 
 	@Override
-	public void removeFromIndex(int index) {
+	public void removeFromIndex(int index)throws  IllegalArgumentException{
 		// Add your implementation here
 		if(index<0||index>=students.length)
 		     throw new IllegalArgumentException();
@@ -143,23 +143,61 @@ public class StudentGroup implements StudentArrayOperation {
 	}
 
 	@Override
-	public void removeFromElement(Student student) {
+	public void removeFromElement(Student student)throws  IllegalArgumentException{
 		// Add your implementation here
+		int index=-1;
+		if(student==null)
+		    throw new IllegalArgumentException();
+		int size=students.length;
+		for(int i=0;i<size;i++)
+		if(students[i].equals(student))
+		      index=i;
+	        if(index!=-1)
+		       removeFromIndex(index);
+		return;
 	}
 
 	@Override
-	public void removeToIndex(int index) {
+	public void removeToIndex(int index)throws  IllegalArgumentException{
 		// Add your implementation here
+		int j=0;
+		if(index<0||index>=students.length)
+		     throw new IllegalArgumentException();
+	        Student[] a=new Student[students.length-index];
+		for(int i=index;i<students.length;i++)
+		     a[j++]=students[i];
+		students=a;
 	}
 
 	@Override
-	public void removeToElement(Student student) {
+	public void removeToElement(Student student)throws  IllegalArgumentException{
 		// Add your implementation here
+		int index=-1;
+		if(student==null)
+		    throw new IllegalArgumentException();
+		int size=students.length;
+		for(int i=0;i<size;i++)
+		    if(students[i].equals(student))
+		          index=i;
+		    if(index!=-1)
+		   {
+		       removeToIndex(index);
+		    }
+		    return;
 	}
 
 	@Override
 	public void bubbleSort() {
 		// Add your implementation here
+		for (int i=0; i<students.length; ++i) 
+			for (int j=0;j<students.length-i-1 ; ++j) 
+				if(students[j].compareTo(students[j+1])>0)
+				{
+					Student temp=students[j];
+					students[j]=students[j+1];
+					students[j+1]=temp;
+				}
+				return;
 	}
 
 	@Override
