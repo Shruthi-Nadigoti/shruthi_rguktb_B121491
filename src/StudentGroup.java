@@ -200,25 +200,24 @@ public class StudentGroup implements StudentArrayOperation {
 	@Override
 	public Student[] getByBirthDate(Date date)throws  IllegalArgumentException{
 		// Add your implementation here
-		/*int count=0;
+		int count=0;
 		if(date==null)
 			throw new IllegalArgumentException();
 		for(int i=0; i< students.length;i++)
 		{
-			if((students[i]. birthDate).compareTo(date)<=0){
+			if((students[i].getBirthDate()).compareTo(date)<=0){
 				count++;
 			}
 		}
-		int Student[] newarr=new Student[count];
+		Student[] newarr=new Student[count];
 		int j=0;
 		for(int i=0; i< students.length;i++)
 		{
-			if((students[i]. birthDate).compareTo(date)<=0){
+			if((students[i]. getBirthDate()).compareTo(date)<=0){
 				newarr[j++]=students[i];
 			}
 		}
-		return newarr;*/
-		return null;
+		return newarr;
 	}
 
 	@Override
