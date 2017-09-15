@@ -215,7 +215,7 @@ public class StudentGroup implements StudentArrayOperation {
 					}
 				}
 			}
-		int Students[] newarr=new Students[count];
+		int Student[] newarr=new Student[count];
 		int j=0;
 		for(int i=0; i< students.length;i++)
 		{
