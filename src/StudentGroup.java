@@ -86,13 +86,13 @@ public class StudentGroup implements StudentArrayOperation {
 		// Add your implementation here
 		if(student==null || index<0||index>=students.length)
 		    throw new IllegalArgumentException();
-		Student[] a=new Student[students.length+1];
+		Student[] newarr=new Student[students.length+1];
 		for(int i=0;i<index;i++)
-		        a[i]=students[i];
-		a[index]=student;
+		        newarr[i]=students[i];
+		newarr[index]=student;
 		for(int i=index;i<students.length;i++)
-		       a[i+1]=students[i];
-		students=a;
+		       newarr[i+1]=students[i];
+		students=newarr;
 	}
 
 	@Override
@@ -101,12 +101,12 @@ public class StudentGroup implements StudentArrayOperation {
 		if(index<0||index>=students.length)
 		     throw new IllegalArgumentException();
 		int size=students.length;
-		Student[] a=new Student[size-1];
+		Student[] arr=new Student[size-1];
 		for(int i=0;i<index;i++)
-		     a[i]=students[i];
+		     arr[i]=students[i];
 		for(int i=index;i<size-1;i++)
-		     a[i]=students[i+1];
-	        students=a;
+		     arr[i]=students[i+1];
+	        students=arr;
 	}
 
 	@Override
@@ -225,6 +225,30 @@ public class StudentGroup implements StudentArrayOperation {
 	@Override
 	public Student[] getBetweenBirthDates(Date firstDate, Date lastDate) {
 		// Add your implementation here
+		/*
+		int count=0;
+		if(firstDate==null || lastDate==null)
+			return IllegalArgumentException();
+		else
+			{
+				for(int i=0; i< students.length;i++)
+				{
+					if((students[i]. birthDate).compareTo(firstDate)>0&&students[i]. birthDate).compareTo(lastDate)<0){
+						count++;
+					}
+				}
+			}
+		int Students[] newarr=new Student[count];
+		int j=0;
+		for(int i=0; i< students.length;i++)
+		{
+			if((students[i]. birthDate).compareTo(firstDate)>0&&(students[i]. birthDate).compareTo(lastDate)<0){
+				newarr[j++]=students[i];
+			}
+		}
+		return newarr;
+		*/
+		
 		return null;
 	}
 
@@ -237,6 +261,17 @@ public class StudentGroup implements StudentArrayOperation {
 	@Override
 	public int getCurrentAgeByDate(int indexOfStudent) {
 		// Add your implementation here
+		/*
+		if(indexOfStudent<0 || indexOfStudent >= students.length)
+		{
+			throw IllegalArgumentException();
+		}
+		
+		LocalDate birthdate = new LocalDate (students[indexOfStudent].birthDate.getYear(),students[indexOfStudent].birthDate.getMonth(),students[indexOfStudent].birthDate.getDate());
+		LocalDate now = new LocalDate();
+		Years age = Years.yearsBetween(birthdate, now);
+		return age.getYears();
+		*/
 		return 0;
 	}
 
