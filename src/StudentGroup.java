@@ -205,16 +205,13 @@ public class StudentGroup implements StudentArrayOperation {
 		// Add your implementation here
 		int count=0;
 		if(date==null)
-			return IllegalArgumentException();
-		else
-			{
-				for(int i=0; i< students.length;i++)
-				{
-					if((students[i]. birthDate).compareTo(date)<=0){
-						count++;
-					}
-				}
+			throw new IllegalArgumentException();
+		for(int i=0; i< students.length;i++)
+		{
+			if((students[i]. birthDate).compareTo(date)<=0){
+				count++;
 			}
+		}
 		int Student[] newarr=new Student[count];
 		int j=0;
 		for(int i=0; i< students.length;i++)
