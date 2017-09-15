@@ -1,2 +1,2 @@
-# shruthi_rguktb_B121491
+# shruthi_rguktb_b121491
 EPAM PADAWANS TEST
