@@ -99,11 +99,10 @@ public class StudentGroup implements StudentArrayOperation {
 		// Add your implementation here
 		if(index<0||index>=students.length)
 		     throw new IllegalArgumentException();
-		int size=students.length;
-		Student[] arr=new Student[size-1];
+		Student[] arr=new Student[students.length-1];
 		for(int i=0;i<index;i++)
 		     arr[i]=students[i];
-		for(int i=index;i<size-1;i++)
+		for(int i=index;i<students.length-1;i++)
 		     arr[i]=students[i+1];
 	        students=arr;
 	}
@@ -115,17 +114,17 @@ public class StudentGroup implements StudentArrayOperation {
 		if(student==null)
 		    throw new IllegalArgumentException();
 		int size=students.length;
-		for(int i=0;i<size;i++)
+		for(int i=0;i<students.length;i++)
 		    if(students[i].equals(student))
 		          index=i;
 		if(index!=-1)
 		{
-		        Student[] a=new Student[size-1];
+		        Student[] newarr=new Student[students.length-1];
 		        for(int i=0;i<index;i++)
-		            a[i]=students[i];
-		       for(int i=index;i<size-1;i++)
-		            a[i]=students[i+1];
-		       students=a;
+		            newarr[i]=students[i];
+		       for(int i=index;i<students.length-1;i++)
+		            newarr[i]=students[i+1];
+		       students=newarr;
 		}
 		   
 	}
@@ -147,8 +146,7 @@ public class StudentGroup implements StudentArrayOperation {
 		int index=-1;
 		if(student==null)
 		    throw new IllegalArgumentException();
-		int size=students.length;
-		for(int i=0;i<size;i++)
+		for(int i=0;i<students.length;i++)
 		if(students[i].equals(student))
 		      index=i;
 	        if(index!=-1)
