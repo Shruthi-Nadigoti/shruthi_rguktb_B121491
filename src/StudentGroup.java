@@ -96,9 +96,9 @@ public class StudentGroup implements StudentArrayOperation {
 	}
 
 	@Override
-	public void remove(int index) {
+	public void remove(int index) throws  IllegalArgumentException{
 		// Add your implementation here
-		/*if(index<0||index>=students.length)
+		if(index<0||index>=students.length)
 		     throw new IllegalArgumentException();
 		int size=students.length;
 		Student[] a=new Student[size-1];
@@ -106,17 +106,40 @@ public class StudentGroup implements StudentArrayOperation {
 		     a[i]=students[i];
 		for(int i=index;i<size-1;i++)
 		     a[i]=students[i+1];
-	        students=a;*/
+	        students=a;
 	}
 
 	@Override
-	public void remove(Student student) {
+	public void remove(Student student)throws  IllegalArgumentException{
 		// Add your implementation here
+		int index=-1;
+		if(student==null)
+		    throw new IllegalArgumentException();
+		int size=students.length;
+		for(int i=0;i<size;i++)
+		    if(students[i].equals(student))
+		          index=i;
+		    if(index!=-1)
+		   {
+		        Student[] a=new Student[size-1];
+		        for(int i=0;i<index;i++)
+		            a[i]=students[i];
+		       for(int i=index;i<size-1;i++)
+		            a[i]=students[i+1];
+		     students=a;
+		    }
+		    return;
 	}
 
 	@Override
 	public void removeFromIndex(int index) {
 		// Add your implementation here
+		if(index<0||index>=students.length)
+		     throw new IllegalArgumentException();
+		Student[] a=new Student[index+1];
+		for(int i=0;i<index;i++)
+		     a[i]=students[i];
+		students=a;
 	}
 
 	@Override
