@@ -1,5 +1,4 @@
 import java.util.Date;
-import java.util.LocalDate ;
 /**
  * A fix-sized array of students
  * array length should always be equal to the number of stored elements
@@ -259,7 +258,7 @@ public class StudentGroup implements StudentArrayOperation {
 	@Override
 	public int getCurrentAgeByDate(int indexOfStudent) throws IllegalArgumentException{
 		// Add your implementation here
-		
+		/*
 		if(indexOfStudent<0 || indexOfStudent >= students.length)
 		{
 			throw new IllegalArgumentException();
@@ -268,7 +267,8 @@ public class StudentGroup implements StudentArrayOperation {
 		LocalDate birthdate = new LocalDate (students[indexOfStudent].getBirthDate().getYear(),students[indexOfStudent].getBirthDate().getMonth(),students[indexOfStudent].getBirthDate().getDate());
 		LocalDate now = new LocalDate();
 		Years age = Years.yearsBetween(birthdate, now);
-		return age.getYears();
+		return age.getYears();*/
+		return 0;
 		
 	}
 
