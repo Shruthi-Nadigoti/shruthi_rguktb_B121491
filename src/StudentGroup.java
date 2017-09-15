@@ -64,15 +64,22 @@ public class StudentGroup implements StudentArrayOperation {
 		  else{
 			    Student[] newarr=new Student[students.length+1];
 			    newarr[0]=student;
-			    for(int i=1;i<=size;i++)
+			    for(int i=1;i<=students.length;i++)
 				newarr[i]=students[i-1];
 			    students=a;
 			}
 	}
 
 	@Override
-	public void addLast(Student student) {
+	public void addLast(Student student) throws  IllegalArgumentException{
 		// Add your implementation here
+		if(student==null)
+		    	throw new IllegalArgumentException();
+	       Student[] newarr=new Student[students.length+1];
+		    for(int i=0;i<size;i++)
+		        newarr[i]=students[i];
+		 newarr[size]=student;
+		 students=newarr;
 	}
 
 	@Override
