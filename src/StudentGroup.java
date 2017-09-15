@@ -41,10 +41,11 @@ public class StudentGroup implements StudentArrayOperation {
 	@Override
 	public Student getStudent(int index)throws  IllegalArgumentException {
 		// Add your implementation here
-		if(index<0||index>=students.length)
+		/*if(index<0||index>=students.length)
 			return new IllegalArgumentException();
 		else
-			return students[index];
+			return students[index];*/
+			return null;
 	}
 
 	@Override
