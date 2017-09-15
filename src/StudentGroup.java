@@ -32,10 +32,10 @@ public class StudentGroup implements StudentArrayOperation {
 	@Override
 	public void setStudents(Student[] students) throws  IllegalArgumentException{
 		// Add your implementation here
-		/*if(students==null)
+		if(students==null)
 			throw new IllegalArgumentException();
 		else
-			this.students=students;*/
+			this.students=students;
 	}
 
 	@Override
