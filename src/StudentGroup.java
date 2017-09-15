@@ -76,7 +76,7 @@ public class StudentGroup implements StudentArrayOperation {
 		if(student==null)
 		    	throw new IllegalArgumentException();
 	       Student[] newarr=new Student[students.length+1];
-		    for(int i=0;i<size;i++)
+		    for(int i=0;i<students.length;i++)
 		        newarr[i]=students[i];
 		 newarr[size]=student;
 		 students=newarr;
