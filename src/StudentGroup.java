@@ -222,9 +222,9 @@ public class StudentGroup implements StudentArrayOperation {
 	}
 
 	@Override
-	public Student[] getBetweenBirthDates(Date firstDate, Date lastDate) {
+	public Student[] getBetweenBirthDates(Date firstDate, Date lastDate) throws  IllegalArgumentException{
 		// Add your implementation here
-		/*
+		
 		int count=0;
 		if(firstDate==null || lastDate==null)
 			return IllegalArgumentException();
@@ -232,7 +232,7 @@ public class StudentGroup implements StudentArrayOperation {
 			{
 				for(int i=0; i< students.length;i++)
 				{
-					if((students[i]. birthDate).compareTo(firstDate)>0&&students[i]. birthDate).compareTo(lastDate)<0){
+					if((students[i].getBirthDate()).compareTo(firstDate)>0&&students[i].getBirthDate()).compareTo(lastDate)<0){
 						count++;
 					}
 				}
@@ -241,14 +241,13 @@ public class StudentGroup implements StudentArrayOperation {
 		int j=0;
 		for(int i=0; i< students.length;i++)
 		{
-			if((students[i]. birthDate).compareTo(firstDate)>0&&(students[i]. birthDate).compareTo(lastDate)<0){
+			if((students[i]. getBirthDate()).compareTo(firstDate)>0&&(students[i].getBirthDate()).compareTo(lastDate)<0){
 				newarr[j++]=students[i];
 			}
 		}
 		return newarr;
-		*/
 		
-		return null;
+		//return null;
 	}
 
 	@Override
