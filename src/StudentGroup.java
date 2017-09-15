@@ -227,12 +227,12 @@ public class StudentGroup implements StudentArrayOperation {
 		
 		int count=0;
 		if(firstDate==null || lastDate==null)
-			return IllegalArgumentException();
+			throw new IllegalArgumentException();
 		else
 			{
 				for(int i=0; i< students.length;i++)
 				{
-					if((students[i].getBirthDate()).compareTo(firstDate)>0&&students[i].getBirthDate()).compareTo(lastDate)<0){
+					if(((students[i].getBirthDate()).compareTo(firstDate)>0)&&((students[i].getBirthDate()).compareTo(lastDate)<0)){
 						count++;
 					}
 				}
@@ -262,7 +262,7 @@ public class StudentGroup implements StudentArrayOperation {
 		/*
 		if(indexOfStudent<0 || indexOfStudent >= students.length)
 		{
-			throw IllegalArgumentException();
+			throw new IllegalArgumentException();
 		}
 		
 		LocalDate birthdate = new LocalDate (students[indexOfStudent].birthDate.getYear(),students[indexOfStudent].birthDate.getMonth(),students[indexOfStudent].birthDate.getDate());
