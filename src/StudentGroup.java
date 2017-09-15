@@ -245,13 +245,34 @@ public class StudentGroup implements StudentArrayOperation {
 	@Override
 	public Student[] getStudentsByAge(int age) {
 		// Add your implementation here
+		/*int count=0;
+		LocalDate now = new LocalDate();
+		for(int i=0; i< students.length;i++)
+		{
+			LocalDate birthdate = new LocalDate (students[i].getBirthDate().getYear(),students[i].getBirthDate().getMonth(),student[i].getBirthDate().getDate());
+			Years a = Years.yearsBetween(birthdate, now);
+			if(a.getYears()==age){
+				count++;
+			}
+		}
+		int Student[] newarr=new Student[count];
+		int j=0;
+		for(int i=0; i< students.length;i++)
+		{
+			LocalDate birthdate = new LocalDate (students[i].getBirthDate().getYear(),students[i].getBirthDate().getMonth(),student[i].getBirthDate().getDate());
+			Years a = Years.yearsBetween(birthdate, now);
+			if(a.getYears()==age){
+				newarr[j++]=students[i];
+			}
+		}
+		return newarr;*/
 		return null;
 	}
 
 	@Override
 	public Student[] getStudentsWithMaxAvgMark() {
 		// Add your implementation here
-		double max=students[0].getAvgMark();
+		/*double max=students[0].getAvgMark();
 		n=students.length;
 		for(int i=0; i < n ;i++)
 		{
@@ -271,7 +292,24 @@ public class StudentGroup implements StudentArrayOperation {
 			if(students[i].getAvgMark()==max)
 				newarr[j++]=students[i];
 		}
-		return newarr;
+		return newarr;*/
+		double maxAvg=students[0].getAvgMark();
+		int count=0;
+		for (int i=1;i<students.length;++i)
+			if(students[i].getAvgMark() > maxAvg)
+				maxAvg=students[i].getAvgMark();
+		for (int i=0;i<students.length;++i)
+			if(students[i].getAvgMark() == maxAvg)
+				count++;
+		Student[] new_students = new Student[count];
+		int j=0;
+		for (int i=0;i<students.length;++i)
+			if(students[i].getAvgMark() == maxAvg)
+			{
+				new_students[j]=students[i];
+				j=j+1;
+			}
+		return new_students;
 		
 	}
 
